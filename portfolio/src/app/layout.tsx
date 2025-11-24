@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Minimalist & Modern",
-  description: "A minimalist portfolio built with Next.js and Tailwind CSS.",
+  title: "Niels Evant | Software Engineer",
+  description: "A portfolio website for Niels Evant Robort",
 };
 
 export default function RootLayout({
