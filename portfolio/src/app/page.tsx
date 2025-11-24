@@ -7,6 +7,7 @@ import MouseParticles from "@/components/ui/MouseParticles";
 import Link from "next/link";
 import { Banner } from "@/components/ui/Banner";
 import { Timeline } from "@/components/ui/Timeline";
+import { Fireworks } from "@/components/ui/Fireworks";
 import { motion, Variants } from "framer-motion";
 
 export default function Home() {
@@ -170,14 +171,20 @@ export default function Home() {
         </motion.section>
 
         {/* Contact Section */}
-        <motion.section variants={itemVariants} id="contact" className="px-4 sm:px-6 lg:px-8 scroll-mt-24 mb-12">
-          <div className="max-w-xl mx-auto text-center space-y-8">
+        <motion.section variants={itemVariants} id="contact" className="px-4 sm:px-6 lg:px-8 scroll-mt-24 mb-12 relative min-h-[500px] flex items-center">
+          {/* Background Fireworks */}
+          <div className="absolute inset-0 rounded-2xl overflow-hidden bg-gradient-to-br from-pink-500/5 to-blue-500/5 backdrop-blur-sm">
+            <Fireworks />
+          </div>
+
+          {/* Content */}
+          <div className="max-w-xl mx-auto text-center space-y-8 relative z-10 pointer-events-none">
             <h2 className="text-3xl font-bold">Get in Touch</h2>
             <p className="text-muted-foreground">
               I'm currently open to new opportunities and collaborations.
               Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
-            <a href="mailto:nielsivant85@gmail.com">
+            <a href="mailto:nielsivant85@gmail.com" className="pointer-events-auto inline-block">
               <Button size="lg" className="w-full sm:w-auto">
                 Say Hello
               </Button>
