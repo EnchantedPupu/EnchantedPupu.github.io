@@ -1,35 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Soft Nature Palette */
-  --background: #FDFBF7;
-  /* Warm White / Soft Cream */
-  --foreground: #333333;
-  /* Soft Charcoal */
+  /* Professional neutral palette with warm accents */
+  --background: #F6F4F0;
+  --foreground: #171717;
 
-  --primary: #9CAF88;
-  /* Sage Green */
+  --primary: #0F4C5C;
   --primary-foreground: #FFFFFF;
 
-  --secondary: #D0A9A9;
-  /* Dusty Rose */
-  --secondary-foreground: #FFFFFF;
+  --secondary: #E3DED5;
+  --secondary-foreground: #2A2724;
 
-  --accent: #9FB4C7;
-  /* Muted Blue */
+  --accent: #C46B3B;
   --accent-foreground: #FFFFFF;
 
-  --muted: #F2F0EB;
-  /* Slightly darker than background for cards/sections */
-  --muted-foreground: #666666;
-  /* Muted Gray */
+  --muted: #EEE9E1;
+  --muted-foreground: #5E5B55;
 
   --card: #FFFFFF;
-  --card-foreground: #333333;
+  --card-foreground: #1D1B18;
 
-  --border: #E5E0D8;
-  --input: #E5E0D8;
-  --ring: #9CAF88;
+  --border: #DED7CC;
+  --input: #DED7CC;
+  --ring: #0F4C5C;
+
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -55,39 +50,33 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Mode - Muted Earthy Tones */
-    --background: #1A1A19;
-    /* Dark Charcoal */
-    --foreground: #E0DCD5;
-    /* Off-white */
+    --background: #1B1F1F;
+    --foreground: #F4EFE7;
 
-    --primary: #8A9E77;
-    /* Muted Sage */
-    --primary-foreground: #FFFFFF;
+    --primary: #7CC3AE;
+    --primary-foreground: #101C18;
 
-    --secondary: #B89090;
-    /* Muted Rose */
-    --secondary-foreground: #FFFFFF;
+    --secondary: #2A302F;
+    --secondary-foreground: #F4EFE7;
 
-    --accent: #869BAE;
-    /* Muted Blue-Grey */
-    --accent-foreground: #FFFFFF;
+    --accent: #E2A478;
+    --accent-foreground: #1C140C;
 
-    --muted: #262625;
-    --muted-foreground: #A09C96;
+    --muted: #242A28;
+    --muted-foreground: #C2B8AD;
 
-    --card: #222221;
-    --card-foreground: #E0DCD5;
+    --card: #202625;
+    --card-foreground: #F4EFE7;
 
-    --border: #333332;
-    --input: #333332;
-    --ring: #8A9E77;
+    --border: #3E4744;
+    --input: #3E4744;
+    --ring: #7CC3AE;
   }
 }
 
@@ -95,12 +84,18 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  background-image: radial-gradient(1100px 600px at 12% -10%, rgba(15, 76, 92, 0.16), transparent 60%),
+    radial-gradient(900px 520px at 88% 0%, rgba(196, 107, 59, 0.14), transparent 55%);
   @apply antialiased;
 }
 
 /* Custom Utilities */
 @layer utilities {
   .glass {
-    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border-b border-white/20 dark:border-white/10;
+    @apply bg-background/80 backdrop-blur-md border-b border-border/70;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
   }
 }

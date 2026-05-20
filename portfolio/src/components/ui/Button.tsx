@@ -16,12 +16,12 @@ export const Button = ({
     children,
     ...props
 }: ButtonProps) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+    const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none cursor-pointer transition";
 
     const variants = {
-        primary: "bg-primary text-primary-foreground shadow-sm",
-        secondary: "border border-input bg-background text-foreground",
-        ghost: "text-foreground",
+        primary: "bg-primary text-primary-foreground shadow-sm hover:shadow-md",
+        secondary: "border border-input bg-background text-foreground hover:border-primary/40",
+        ghost: "text-foreground hover:text-primary",
     };
 
     const sizes = {

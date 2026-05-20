@@ -11,8 +11,8 @@ interface CardProps {
 export const Card = ({ children, className = '' }: CardProps) => {
     return (
         <motion.div
-            whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            className={`bg-card text-card-foreground rounded-2xl border border-border p-6 shadow-sm transition-shadow duration-300 hover:shadow-md ${className}`}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className={`bg-card text-card-foreground rounded-2xl border border-border/80 p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-border ${className}`}
         >
             {children}
         </motion.div>
