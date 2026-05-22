@@ -80,6 +80,46 @@ export default function Home() {
 
   const projects: Project[] = [
     {
+      title: "Real-time Buffered Reporting Engine",
+      period: "May 2026",
+      description:
+        "Real-time financial transaction dashboard with a .NET 9 gRPC backend and a React + Redux frontend. The backend streams mock transactions at high frequency, while Redis provides a hot-cache layer to avoid repeated work. The frontend buffers incoming gRPC packets and only flushes to the UI every 500ms to avoid render storms.",
+      stack: [
+        ".NET 9",
+        "gRPC",
+        "Protobuf",
+        "Redis",
+        "React",
+        "Redux Toolkit",
+        "Vite",
+        "TypeScript",
+        "gRPC-Web",
+        "Prometheus",
+        "Docker"
+      ],
+      highlights: [
+        "Server-streaming gRPC API with Protobuf and gRPC-Web client.",
+        "Redis hot-cache with batch recycling plus pub/sub invalidation.",
+        "Per-instance throttling and per-client token bucket rate limiting.",
+        "Client buffer flush every 500ms with adaptive batch sizing.",
+        "Virtualized list rendering with rolling anomaly detection."
+      ],
+      images: [
+        {
+          src: "/assets/Real-time%20Buffered%20Reporting%20Engine/Screenshot%202026-05-22%20125700.png",
+          alt: "Transaction dashboard with live metrics"
+        },
+        {
+          src: "/assets/Real-time%20Buffered%20Reporting%20Engine/Screenshot%202026-05-22%20131743.png",
+          alt: "Transaction dashboard with charts and category mix"
+        },
+        {
+          src: "/assets/Real-time%20Buffered%20Reporting%20Engine/Screenshot%202026-05-22%20134027.png",
+          alt: "Transaction dashboard with transaction list"
+        }
+      ]
+    },
+    {
       title: "MedSense",
       period: "Oct 2025 - Jul 2026",
       description:
